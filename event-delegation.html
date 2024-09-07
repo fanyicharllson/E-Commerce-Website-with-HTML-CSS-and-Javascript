@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<body>
+    <style>
+        * {
+            text-decoration: none;
+            list-style: none;
+        }
+        
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        ul li {
+            background-color: brown;
+            color: white;
+            padding: 8px 34px;
+            font-size: larger;
+            cursor: pointer;
+        }
+    </style>
+    <ul id="itemList">
+        <li data-id="1">1</li>
+        <li data-id="2">2</li>
+        <li data-id="3">3</li>
+    </ul>
+
+    <script>
+        const Item = document.querySelector('#itemList');
+
+        Item.addEventListener('click', (e) => {
+            if(e.target.matches('li')) {
+               const clickitem = e.target.getAttribute('data-id');
+               console.log(`Item clicked:  ${clickitem}`);
+
+               e.target.style.backgroundColor = 'blue';
+
+            }
+        })
+
+    </script>
+</body>
+</html>

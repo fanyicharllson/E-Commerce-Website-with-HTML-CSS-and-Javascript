@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;  
+}
+nav {
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+   padding: 1.5em; 
+}
+nav i {
+    font-size: 25px;
+    cursor: pointer;
+    color: #28a745;
+    margin-left: 40px;
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+}
+.signUp-container, .login-container {
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+
+}
+.container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.text {
+    position: absolute;
+    top: -16px;
+    color: #28a745;
+    font-size: 20px;
+    font-weight: bold;
+    /* background-color: white; */
+}
+label {
+    display: block;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* transition: outline 0.5s ease-in-out; */
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    outline: 2px solid #28a745;
+}
+input[type="submit"] {
+    
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 636px) {
+    .signUp-container, .login-container {
+        width: 90%;
+    }
+}

@@ -1,0 +1,113 @@
+
+body, html {
+    
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /*prevent horizintal scrolling */
+    background-color: var(--body-background-color);
+    transition: background-color 2s ease;
+    font-family: Arial;
+    position: relative;
+    /* animation: backgroundChangeColor 7s linear infinite; */
+    
+    
+
+
+}
+:root {
+    --background-color: #4CAF50;
+    --color: white;
+    --welome-message-background: rgb(82, 15, 145);
+    --welome-message-background-ii: blueViolet;
+    --body-background-color: rgb(8, 6 , 6);
+    --box-showdow-color:  rgba(0, 0, 0, 0.2);
+    
+}
+/* Particle container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    visibility: visible;
+    display: block;
+}
+
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    background-color: var(--background-color);
+    color: var(--color);
+    padding: 20px 40px;
+    font-size: 50px;
+    font-weight: bold;
+    white-space: nowrap; /*prevent text from wrapping*/
+    z-index: 10;
+    transition: left 9s linear, opacity 1s ease-in-out; /*Move steadily accross the screen over 7s*/
+    background: linear-gradient(90deg, var(--welome-message-background), var(--welome-message-background-ii));
+    border-radius: 25px;
+    display: inline-block;
+    box-shadow: 0 4px 15px var(--box-showdow-color);
+    animation: moveAcross 7s linear infinite, colorChange 7s linear infinite; 
+    
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing:  antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+/*Css animation for changing color*/
+@keyframes colorChange {
+    0% {color: var(--color)}
+    25%{color: royalblue;}
+    50%{color: darkturquoise;}
+    75%{color: white;}
+    100%{color: red;}
+
+}
+/* @keyframes backgroundChangeColor {
+    0% {
+        background-color: black;   
+    }
+    50% {background-color: aquamarine;}
+    75% {background-color: #417b43;}
+    100%{background-color: white}
+} */
+@keyframes moveAcross {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+/* responsive layout design for welcome messsage */
+@media (max-width: 1024px) {
+    .welcome-message {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
+}
+@media (max-width: 768px) {
+    .welcome-message {
+        padding: 15px 30px;
+        font-size: 20px;
+        left: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-message {
+        padding: 10px 20px;
+        font-size: 16px;
+        left: 100%;
+        transition: left 6s linear, opacity 1s ease-in-out; /*Move steadily accross the screen over 7s*/
+        transform: translateY(-50%);
+    }
+}

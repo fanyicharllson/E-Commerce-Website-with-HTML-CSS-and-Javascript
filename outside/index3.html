@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome-free-6.5.2-web/css/all.css">
+    <title>Tooltip Example</title>
+    <style>
+        /* Basic styles for the cart */
+        .cart {
+            position: relative;
+            display: inline-block;
+        }
+
+        .cart-icon {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            width: 100px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: -35px; /* Adjust the distance from the icon */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            font-size: 14px;
+        }
+
+        .cart-icon:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .cart-count {
+            font-size: 14px;
+            margin-left: 8px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cart">
+    <a href="#" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <div class="tooltip">View Cart</div>
+    </a>
+    <a href="#"><span class="cart-count" id="nav-number-product">0</span></a>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Shop Website</title>
+
+    <!-- css links -->
+    <link rel="stylesheet" href="./CSS FOLDER/home-main-content-header.css">
+    <link rel="stylesheet" href="./CSS FOLDER/product-home.css">
+    <link rel="stylesheet" href="./CSS FOLDER/home-main-content-products.css">
+
+    <!-- fontawesome links -->
+    <!-- <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.css" /> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Pop up Links -->
+     <link rel="stylesheet" href="./AlertSweat/sweetalert2.min.css">
+     <script src="./AlertSweat/sweetalert2.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+  </head>
+  <body>
+    
+      <!-- nav section*************************** -->
+      <nav class="navbar">
+        <div class="nav-left">
+            <a href="Home.html" class="logo">E<span class="logo-span">-SHOP</span></a>
+        </div>
+        <div class="nav-center">
+            <input type="text" class="search-bar" placeholder="Search Product...">
+            <button class="search-btn"><i class="fas fa-search">
+              <div class="tooltip too-search">Search</div>
+            </i></button>
+        </div>
+        <div class="nav-right">
+            <div class="dropdown">
+                <button class="dropbtn"> <a href="Sign-up.html">Sign Up</a> &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="Sign _in.html">Login</a>
+                    <a href="#main" id="nav-product">Products</a> <!-- check home-header.js for sweat aleart display -->
+                    <a href="#">Contact Us</a>
+                    <a href="#">About Us</a>
+                </div>
+            </div>
+            <div class="cart">
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i>
+                  <div class="tooltip">View Cart or Double click <br> to empty cart</div>
+                </a>
+               
+                <a href="#"><span class="cart-count" id="nav-number-product"></span></a>
+            </div>
+            <a href="#" class="returns">Returns & Orders</a>
+        </div>
+        <div class="hamburger">
+            &#9776;
+        </div>
+    </nav>
+    <!-- end of nav section******************** -->
+  
+
+
+
+    <section class="main-content" id="mainContent">
+
+
+    <!-- main content section ********************** -->
+     <main class="main-grid" id="main">
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/backpack.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Black Student Bag
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-30.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">30</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $15.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap"">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/coffeemaker-with-glass-carafe-black.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Coffeemaker with glass black
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-45.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">45</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $10.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/electric-glass-and-steel-hot-water-kettle.webp" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Electric Glass and Steel Kettle
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-30.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">30</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $20.00
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/double-elongated-twist-french-wire-earrings.webp" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Double Twist French Earing
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-30.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">30</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $15.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/kitchen-paper-towels-30-pack.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          kitchen Paper Towels
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-35.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">35</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $9.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/trash-can-with-foot-pedal-50-liter.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          50-liter Trash Can
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-05.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">5</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $1.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/umbrella.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Umbrella
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-30.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">30</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $4.9
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/vanity-mirror-silver.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Vanity Mirror Silver
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-45.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">45</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $24.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/women-chunky-beanie-gray.webp" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Women Chunky Beanie Gray
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-30.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">30</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $7.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/women-french-terry-fleece-jogger-camo.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Women French Jogger
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-30.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">30</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $15.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/women-knit-ballet-flat-black.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Women Knit Ballet Flat Black
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-15.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">15</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $9.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/women-stretch-popover-hoodie-black.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Women Stretch Popover Hoodie
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-30.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">30</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $15.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/round-sunglasses-black.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Round Sunglasses Black
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-50.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">50</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $45.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/men-athletic-shoes-green.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Men Althlethic Shoes Green
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-30.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">1000</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $30.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/men-chino-pants-beige.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Men Chino Pants Beige
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-30.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">1200</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $15.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/men-golf-polo-t-shirt-blue.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Men Golf Polo T-Shirt
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-45.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">387</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $16.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/men-slim-fit-summer-shorts-gray.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Men Slim Summer Gray
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-50.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">100</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $24.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/floral-mixing-bowl-set.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Floral Mixing Bowl Set
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-50.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">1005</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $100
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/liquid-laundry-detergent-plain.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Liquid Laundary Detergent Plain
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-50.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">130</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $2.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/blackout-curtain-set-beige.webp" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Blackout Curtain Set Beige
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-50.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">100</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $24.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/plain-hooded-fleece-sweatshirt-yellow.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Plain Hooded Sweatshirt Yellow
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-50.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">2003</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $39.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/6-piece-non-stick-baking-set.webp" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          6 Piece Non Sticky Baking Set
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-50.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">203</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $3.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/duvet-cover-set-blue-twin.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          Duvet Cover Set Blue Twin
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-50.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">503</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $9.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+      <div class="product-container">
+
+        <div class="product-image-container d-flex-image">
+          <img src="./products/6-piece-white-dinner-plate-set.jpg" alt="" class="product-image">
+        </div>
+
+
+        <div class="product-name">
+          6 Piece White Dinner Plate Set
+        </div>
+
+        <div class="product-rating-container d-flex d-gap">
+          <img src="./ratings/rating-50.png" alt="User ratings" class="user-rating-img">
+          <div class="product-number-rating">
+            <a href="#">903</a>
+          </div>
+        </div>
+
+        <div class="product-price d-flex d-gap">
+          <div class="price">
+            <span>Price:</span>
+           </div>
+           $40.99
+        
+        </div>
+
+        <div class="product-selection d-flex d-gap">
+          <div class="selection-text">
+            Select Quantity:
+          </div>
+          <select name="numbers" id="productNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+
+
+        <div class="flex-spacer">
+        </div>
+
+
+        <div class="added-container d-flex d-gap">  <!-- will use js to disaplay this -->
+          <img src="./icons/checkmark.png" alt="checked" class="checkmark-img">
+          <div class="checked-message">
+          Product added to card
+          </div>
+        </div>
+
+
+        <div class="add-button-container">
+          <a href="#" class="add-product-button">Add Product to Cart</a>
+        </div>
+
+      </div>
+
+      
+     </main>
+    </section>
+
+      <!-- More Product Button*************************** -->
+      <div class="more-product-button">
+
+        <div class="more-inner-container d-gap">
+          <div>
+            <a href="Home-More-product.html">View More Products</a>
+          </div>
+          <div>
+            <a href="Home-More-product.html"> <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+       
+       
+       </div>
+
+
+       <!-- Footer goes here -->
+
+       <footer>
+
+
+       </footer>
+
+
+
+    
+    <!-- javascript links -->
+    <script src="./JS FOLDER/home-header.js"></script>
+    <script src="./JS FOLDER/home-search-bar.js"></script>
+    <script src="./JS FOLDER/home-add-product-card.js"></script>
+  </body>
+</html>
